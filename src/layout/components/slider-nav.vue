@@ -1,7 +1,7 @@
 <template>
   <el-menu
     default-active="2"
-    class="el-menu-vertical-demo"
+    class="el-menu-vertical-demo slider-nav"
     background-color="#545c64"
     text-color="#fff"
   >
@@ -40,10 +40,13 @@
 
 <script>
 export default {
-  
+  name: 'sliderNav'
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="less" scoped>
+.slider-nav{
+  width: 200px;
+  height: 100vh;
+}
 </style>
