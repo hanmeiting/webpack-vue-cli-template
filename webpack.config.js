@@ -2,11 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { VueLoaderPlugin } = require('vue-loader');
+const MiniCssExtractPugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    publicPath: '/'
   },
   devServer: {
     open: true,
@@ -23,6 +25,23 @@ module.exports = {
         use: [
           { loader: 'vue-loader' }
         ]
+      },
+      {
+        test: /\.css/,
+        use:[MiniCssExtractPugin.loader, 'css-loader']
+      },
+      {
+        test: /\.less/,
+        use:[MiniCssExtractPugin.loader, 'css-loader','less-loader']
+      },
+      { //字体文件
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          name: "[name].[ext]",
+          outputPath: './fonts',
+          limit: false
+        }
       }
     ]
   },
@@ -39,6 +58,9 @@ module.exports = {
 				collapseWhitespace:true,
 				removeAttributeQuotes:true
 			}
+    }),
+    new MiniCssExtractPugin({
+      filename: 'css/[name].css'
     })
   ]
 }
