@@ -1,26 +1,32 @@
 <template>
   <div class="layout">
     <slider-nav></slider-nav>
-    <el-main>
+    <el-container class="container">
       <top-header></top-header>
-    </el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
-import SliderNav from './components/slider-nav.vue'
-import TopHeader from './components/top-header.vue'
+import SliderNav from "./components/slider-nav.vue";
+import TopHeader from "./components/top-header.vue";
 export default {
-  name: 'layout',
+  name: "layout",
   components: {
     SliderNav,
-    TopHeader
-  }
-}
+    TopHeader,
+  },
+};
 </script>
 
 <style lang="less" scoped>
-.layout{
+.layout {
   display: flex;
+  .container {
+    flex-direction: column;
+  }
 }
 </style>

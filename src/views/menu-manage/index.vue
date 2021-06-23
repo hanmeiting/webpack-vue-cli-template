@@ -1,15 +1,10 @@
 <template>
-  <div>
-    go shoping
-  </div>
+  <div>菜单管理</div>
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
