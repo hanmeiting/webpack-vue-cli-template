@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    // [
+    //   "transform-es2015-arrow-functions", // 处理箭头函数
+    //   {
+    //     "spec": true
+    //   }
+    // ],
+    "syntax-dynamic-import" // 处理路由懒加载使用import语法
+  ]
+}

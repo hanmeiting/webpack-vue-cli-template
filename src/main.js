@@ -10,3 +10,11 @@ new Vue ({
   router,
   render: h => h (App) // 用App.vue渲染
 })
+
+
+const arr = [12, 3, 4];
+console.log(...arr);
+
+const fn = () => {
+  console.log(111);
+}

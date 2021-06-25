@@ -9,7 +9,6 @@
     </el-container>
   </div>
 </template>
-
 <script>
 import SliderNav from "./components/slider-nav.vue";
 import TopHeader from "./components/top-header.vue";
@@ -18,7 +17,7 @@ export default {
   components: {
     SliderNav,
     TopHeader,
-  },
+  }
 };
 </script>
 
