@@ -3,9 +3,9 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter)
 
-const LAYOUT = () => import('../layout/index.vue');
+const LAYOUT = () => import('@/layout/index.vue');
 import USER_MANAGE_LISTS from './user-manage';
-import menuManageLists from './menu-manage';
+import MENU_MANAGE_LISTS from './menu-manage';
 const routes = [{
   path: '/',
   name: 'index',
@@ -18,7 +18,7 @@ const routes = [{
   },
   children: [
     ...USER_MANAGE_LISTS,
-    ...menuManageLists
+    ...MENU_MANAGE_LISTS
   ]
 }]
 

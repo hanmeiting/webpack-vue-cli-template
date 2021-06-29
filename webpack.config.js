@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPugin = require('mini-css-extract-plugin');
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: './src/main.js',
   output: {
     path: path.join(__dirname, 'dist'),
@@ -16,7 +17,11 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     hot: true
   },
-  mode: 'development',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '/src')
+    }
+  },
   // 配置loaders的
   module: {
     rules: [

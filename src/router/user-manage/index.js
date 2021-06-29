@@ -1,5 +1,5 @@
-const USER_MANAGE = () => import('../../views/user-manage/index.vue');
-const USER_MANAGE_LIST = () => import('../../views/user-manage/user-list.vue');
+const USER_MANAGE = () => import('@/views/user-manage/index.vue');
+const USER_MANAGE_LIST = () => import('@/views/user-manage/user-list.vue');
 
 export default [{
   path: '/user-manage',
